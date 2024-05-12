@@ -1,17 +1,12 @@
 import { GameQuery } from "../App";
 import useData from "./useData";
-
-export interface ParentPlatform {
-  id: number;
-  name: string;
-  slug: string;
-}
+import { Platform } from "./usePlatforms";
 
 export interface Game {
   id: number;
   name: string;
   background_image: string;
-  parent_platforms: { platform: ParentPlatform }[];
+  parent_platforms: { platform: Platform }[];
   metacritic: number;
 }
 

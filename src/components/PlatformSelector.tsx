@@ -23,7 +23,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
             key={platform.id}
             onClick={() => onSelectPlatform(platform)}
           >
-            {platform.name}
+            {platform.slug === 'playstation' ? platform.name + " (No data from API)" : platform.name}
           </MenuItem>
         ))}
       </MenuList>
